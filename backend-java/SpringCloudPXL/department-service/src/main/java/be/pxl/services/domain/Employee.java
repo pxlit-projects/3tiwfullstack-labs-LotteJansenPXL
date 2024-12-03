@@ -6,21 +6,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
-@Table(name="department")
+@Table(name="employee")
 @Data //setters, getters, equals en tostring
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Department {
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private Long organizationId;
+    private Long departmentId;
     private String name;
-    private List<Employee> employees = new ArrayList<>();
+    private int age;
     private String position;
 }
