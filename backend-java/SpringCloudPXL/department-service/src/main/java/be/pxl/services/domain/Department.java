@@ -21,6 +21,7 @@ public class Department {
     private Long id;
     private Long organizationId;
     private String name;
+    @OneToMany(mappedBy = "department")
     private List<Employee> employees = new ArrayList<>();
     private String position;
 }
